@@ -1,0 +1,318 @@
+2014/10/06 05:04:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "saludo/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('saludo/index')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\proyectosw3\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/proyectosw3/index.php?r=saludo/index
+---
+2014/10/06 10:57:20 [error] [exception.CException] exception 'CException' with message 'UsuarioController no ha podido encontrar la vista "index" solicitada.' in C:\xampp\htdocs\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#1 C:\xampp\htdocs\proyectosw3\protected\controllers\UsuarioController.php(16): CController->render('index', Array)
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UsuarioController->actionIndex()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/index')
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\proyectosw3\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/proyectosw3/usuario/index
+---
+2014/10/06 18:33:14 [error] [php] include(Users.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\proyectosw3\protected\components\UserIdentity.php(21): spl_autoload_call()
+#1 C:\xampp\htdocs\proyectosw3\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate()
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CInlineValidator->validate()
+#5 C:\xampp\htdocs\proyectosw3\protected\controllers\SiteController.php(94): LoginForm->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\proyectosw3\index.php(13): CWebApplication->run()
+REQUEST_URI=/proyectosw3/site/login
+in C:\xampp\htdocs\proyectosw3\protected\components\UserIdentity.php (21)
+in C:\xampp\htdocs\proyectosw3\protected\models\LoginForm.php (52)
+in C:\xampp\htdocs\proyectosw3\protected\controllers\SiteController.php (94)
+2014/10/06 18:33:54 [error] [system.db.CDbCommand] CDbCommand::fetch() falló: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. La sentencia SQL ejecutada fue: SELECT * FROM `usuario` `t` WHERE LOWER(username)=? LIMIT 1.
+in C:\xampp\htdocs\proyectosw3\protected\components\UserIdentity.php (21)
+in C:\xampp\htdocs\proyectosw3\protected\models\LoginForm.php (52)
+in C:\xampp\htdocs\proyectosw3\protected\controllers\SiteController.php (94)
+2014/10/06 18:33:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `usuario` `t` WHERE LOWER(username)=? LIMIT 1' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1456): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\proyectosw3\protected\components\UserIdentity.php(21): CActiveRecord->find('LOWER(username)...', Array)
+#4 C:\xampp\htdocs\proyectosw3\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#5 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#6 C:\xampp\htdocs\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#8 C:\xampp\htdocs\proyectosw3\protected\controllers\SiteController.php(94): CModel->validate()
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\proyectosw3\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/proyectosw3/site/login
+HTTP_REFERER=http://localhost:8080/proyectosw3/site/login
+---
+2014/10/06 18:34:57 [error] [php] Undefined variable: user (C:\xampp\htdocs\proyectosw3\protected\components\UserIdentity.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#1 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\xampp\htdocs\proyectosw3\protected\controllers\SiteController.php(94): LoginForm->validate()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\proyectosw3\index.php(13): CWebApplication->run()
+REQUEST_URI=/proyectosw3/site/login
+in C:\xampp\htdocs\proyectosw3\protected\components\UserIdentity.php (22)
+in C:\xampp\htdocs\proyectosw3\protected\models\LoginForm.php (52)
+in C:\xampp\htdocs\proyectosw3\protected\controllers\SiteController.php (94)
+2014/10/06 18:36:15 [error] [exception.CException] exception 'CException' with message 'La propiedad "Usuario"."password" no se encuentra definida.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('password')
+#1 C:\xampp\htdocs\proyectosw3\protected\components\UserIdentity.php(24): CActiveRecord->__get('password')
+#2 C:\xampp\htdocs\proyectosw3\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#3 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 C:\xampp\htdocs\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 C:\xampp\htdocs\proyectosw3\protected\controllers\SiteController.php(94): CModel->validate()
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\proyectosw3\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/proyectosw3/site/login
+HTTP_REFERER=http://localhost:8080/proyectosw3/site/login
+---
+2014/10/06 18:37:18 [error] [exception.CException] exception 'CException' with message 'La propiedad "UserIdentity"."contraseña" no se encuentra definida.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\proyectosw3\protected\components\UserIdentity.php(24): CComponent->__get('contrase\xC3\xB1a')
+#1 C:\xampp\htdocs\proyectosw3\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 C:\xampp\htdocs\proyectosw3\protected\controllers\SiteController.php(94): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\proyectosw3\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/proyectosw3/site/login
+HTTP_REFERER=http://localhost:8080/proyectosw3/site/login
+---
+2014/10/06 19:29:34 [error] [exception.CException] exception 'CException' with message 'La propiedad "UserIdentity"."contraseña" no se encuentra definida.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\proyectosw3\protected\components\UserIdentity.php(24): CComponent->__get('contrase\xC3\xB1a')
+#1 C:\xampp\htdocs\proyectosw3\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 C:\xampp\htdocs\proyectosw3\protected\controllers\SiteController.php(94): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\proyectosw3\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/proyectosw3/site/login
+HTTP_REFERER=http://localhost:8080/proyectosw3/site/login
+---
+2014/10/06 19:30:22 [error] [exception.CException] exception 'CException' with message 'La propiedad "Usuario"."password" no se encuentra definida.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('password')
+#1 C:\xampp\htdocs\proyectosw3\protected\components\UserIdentity.php(24): CActiveRecord->__get('password')
+#2 C:\xampp\htdocs\proyectosw3\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#3 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 C:\xampp\htdocs\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 C:\xampp\htdocs\proyectosw3\protected\controllers\SiteController.php(94): CModel->validate()
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\proyectosw3\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/proyectosw3/site/login
+HTTP_REFERER=http://localhost:8080/proyectosw3/site/login
+---
+2014/10/06 19:31:59 [error] [exception.CException] exception 'CException' with message 'La propiedad "UserIdentity"."contrasenia" no se encuentra definida.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\proyectosw3\protected\components\UserIdentity.php(24): CComponent->__get('contrasenia')
+#1 C:\xampp\htdocs\proyectosw3\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 C:\xampp\htdocs\proyectosw3\protected\controllers\SiteController.php(94): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\proyectosw3\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/proyectosw3/site/login
+HTTP_REFERER=http://localhost:8080/proyectosw3/site/login
+---
+2014/10/06 19:36:57 [error] [exception.CException] exception 'CException' with message 'La propiedad "UserIdentity"."contrasenia" no se encuentra definida.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\proyectosw3\protected\components\UserIdentity.php(24): CComponent->__get('contrasenia')
+#1 C:\xampp\htdocs\proyectosw3\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 C:\xampp\htdocs\proyectosw3\protected\controllers\SiteController.php(94): CModel->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\proyectosw3\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/proyectosw3/site/login
+HTTP_REFERER=http://localhost:8080/proyectosw3/site/login
+---
+2014/10/06 19:42:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "usuario" solicitada.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('usuario')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('usuario')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\proyectosw3\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/proyectosw3/site/usuario
+HTTP_REFERER=http://localhost:8080/proyectosw3/
+---
+2014/10/06 19:42:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "convocatoria" solicitada.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('convocatoria')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('convocatoria')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/convocator...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\proyectosw3\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/proyectosw3/site/convocatoria
+HTTP_REFERER=http://localhost:8080/proyectosw3/site/usuario
+---
+2014/10/06 19:42:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "usuario" solicitada.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('usuario')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('usuario')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\proyectosw3\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/proyectosw3/site/usuario
+HTTP_REFERER=http://localhost:8080/proyectosw3/site/convocatoria
+---
+2014/10/06 19:42:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "usuario" solicitada.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('usuario')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('usuario')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\proyectosw3\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/proyectosw3/site/usuario
+---
+2014/10/06 19:43:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "usuario" solicitada.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('usuario')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('usuario')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\proyectosw3\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/proyectosw3/site/usuario
+---
+2014/10/06 19:44:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "usuario" solicitada.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('usuario')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('usuario')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/usuario/in...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\proyectosw3\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/proyectosw3/site/usuario/index
+HTTP_REFERER=http://localhost:8080/proyectosw3/
+---
+2014/10/06 19:44:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "convocatoria" solicitada.' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('convocatoria')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('convocatoria')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/convocator...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\proyectosw3\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/proyectosw3/site/convocatoria/index
+HTTP_REFERER=http://localhost:8080/proyectosw3/site/usuario/index
+---
+2014/10/06 19:45:44 [error] [exception.CException] exception 'CException' with message 'La propiedad "Usuario"."contraseña" no se encuentra definida.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('contrase\xC3\xB1a')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('contrase\xC3\xB1a')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Usuario), 'contrase\xC3\xB1a')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Usuario), 'contrase\xC3\xB1a', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Usuario), 'contrase\xC3\xB1a', Array)
+#5 C:\xampp\htdocs\proyectosw3\protected\views\usuario\_form.php(72): CActiveForm->textField(Object(Usuario), 'contrase\xC3\xB1a', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\proyectosw3\protected\views\usuario\create.php(18): CController->renderPartial('_form', Array)
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 C:\xampp\htdocs\proyectosw3\protected\controllers\UsuarioController.php(79): CController->render('create', Array)
+#15 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): UsuarioController->actionCreate()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#25 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/create')
+#26 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\proyectosw3\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/proyectosw3/usuario/create
+HTTP_REFERER=http://localhost:8080/proyectosw3/usuario/index
+---
