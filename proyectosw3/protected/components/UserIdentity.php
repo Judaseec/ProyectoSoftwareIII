@@ -18,7 +18,7 @@ class UserIdentity extends CUserIdentity
 	 */
 	public function authenticate()
 	{
-		$user=Usuario::model()->find("LOWER(usuario)=?",array(strtolower($this->username)));
+		$user=Usuarios::model()->find("LOWER(usuario)=?",array(strtolower($this->username)));
 		if($user===null)
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
 		elseif(sha1($this->password)!==$user->contrasenia)

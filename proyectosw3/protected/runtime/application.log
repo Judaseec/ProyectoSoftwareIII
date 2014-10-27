@@ -316,3 +316,41 @@ Stack trace:
 REQUEST_URI=/proyectosw3/usuario/create
 HTTP_REFERER=http://localhost:8080/proyectosw3/usuario/index
 ---
+2014/10/26 17:23:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "usuario/index"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/index')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ProyectoSoftwareIII\proyectosw3\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ProyectoSoftwareIII/proyectosw3/usuario/index
+HTTP_REFERER=http://localhost:8080/ProyectoSoftwareIII/proyectosw3/
+---
+2014/10/26 17:23:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "convocatoria/index"' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('convocatoria/in...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ProyectoSoftwareIII\proyectosw3\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ProyectoSoftwareIII/proyectosw3/convocatoria/index
+HTTP_REFERER=http://localhost:8080/ProyectoSoftwareIII/proyectosw3/usuario/index
+---
+2014/10/26 17:31:57 [error] [php] include(Usuario.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\ProyectoSoftwareIII\proyectosw3\protected\components\UserIdentity.php(21): spl_autoload_call()
+#1 C:\xampp\htdocs\ProyectoSoftwareIII\proyectosw3\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate()
+#3 C:\xampp\htdocs\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#4 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CInlineValidator->validate()
+#5 C:\xampp\htdocs\ProyectoSoftwareIII\proyectosw3\protected\controllers\SiteController.php(94): LoginForm->validate()
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\ProyectoSoftwareIII\proyectosw3\index.php(13): CWebApplication->run()
+REQUEST_URI=/ProyectoSoftwareIII/proyectosw3/site/login
+in C:\xampp\htdocs\ProyectoSoftwareIII\proyectosw3\protected\components\UserIdentity.php (21)
+in C:\xampp\htdocs\ProyectoSoftwareIII\proyectosw3\protected\models\LoginForm.php (52)
+in C:\xampp\htdocs\ProyectoSoftwareIII\proyectosw3\protected\controllers\SiteController.php (94)
