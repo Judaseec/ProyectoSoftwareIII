@@ -3,7 +3,7 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Convocatoriases',
+	'Convocatorias',
 );
 
 $this->menu=array(

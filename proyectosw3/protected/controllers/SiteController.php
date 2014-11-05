@@ -2,9 +2,7 @@
 
 class SiteController extends Controller
 {
-
-	public $layout='//layouts/main';
-
+	//public $layout='//layouts/main';
 	/**
 	 * Declares class-based actions.
 	 */
@@ -32,7 +30,10 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+		//$this->render('index');
+		$this->layout="main";
+		$model=new LoginForm;
+		$this->render('index',array("model"=>$model));
 	}
 
 	/**
@@ -80,7 +81,6 @@ class SiteController extends Controller
 	 */
 	public function actionLogin()
 	{
-		$this->layout="login";
 		$model=new LoginForm;
 
 		// if it is ajax validation request
