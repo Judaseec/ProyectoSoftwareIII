@@ -3,7 +3,7 @@
 /* @var $model Convocatorias */
 
 $this->breadcrumbs=array(
-	'Convocatoriases'=>array('index'),
+	'Convocatorias'=>array('index'),
 	$model->idConvocatoria=>array('view','id'=>$model->idConvocatoria),
 	'Update',
 );

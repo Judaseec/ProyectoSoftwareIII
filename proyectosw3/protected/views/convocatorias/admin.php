@@ -3,7 +3,7 @@
 /* @var $model Convocatorias */
 
 $this->breadcrumbs=array(
-	'Convocatoriases'=>array('index'),
+	'Convocatorias'=>array('index'),
 	'Manage',
 );
 
